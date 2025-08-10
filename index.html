@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bülent Karanfil | Yazılım Geliştirici</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ99OER5k2V+I3h1F8b2n9zW/zJq6i2t/Kq6KzI3U21i5j2/V0/gV9G+Kk/d74A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0c11;
+            color: #d1d5db;
+        }
+        .header-section {
+            background-color: #1a1a1a;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid #2d3748;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            margin-bottom: 24px;
+            transition: transform 0.3s ease;
+        }
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+        .gradient-text {
+            background-image: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-title {
+            position: relative;
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #f3f4f6;
+            text-align: center;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #818cf8;
+            border-radius: 2px;
+        }
+        .card {
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+        .skill-badge {
+            background-color: #374151;
+            color: #d1d5db;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+        .skill-badge:hover {
+            background-color: #818cf8;
+            color: #1f2937;
+        }
+        .experience-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #374151;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #818cf8;
+            border-radius: 50%;
+            border: 4px solid #1f2937;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #6b7280;
+            padding: 24px 0;
+            text-align: center;
+        }
+        .footer-link {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container mx-auto px-4">
+            <img src="https://placehold.co/180x180/2d3748/e2e8f0?text=BK" alt="Bülent Karanfil" class="profile-photo mx-auto">
+            <h1 class="text-5xl font-bold mb-2">Bülent Karanfil</h1>
+            <p class="text-2xl font-medium text-gray-400">Yazılım Geliştirici | <span class="gradient-text font-bold">.NET Developer</span></p>
+            <div class="flex justify-center mt-6 space-x-6">
+                <a href="https://www.linkedin.com/in/b%C3%BClent-karanfil-712666232" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://www.github.com/karanfil123/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        
+        <!-- Hakkımda -->
+        <section id="about" class="mb-24">
+            <h2 class="section-title">Hakkımda</h2>
+            <div class="card p-8">
+                <p class="text-lg leading-relaxed">
+                    .NET tabanlı uygulamalar üzerinde backend geliştirme süreçlerinde tecrübeli bir Yazılım Geliştiriciyim. Özellikle C#, ASP.NET Core, veritabanı işlemleri ve API entegrasyonları alanlarında uzmanlaştım. Bankacılık yazılımları, kart yönetim sistemleri ve iş katmanı geliştirmeleri üzerine çalışarak yazılım geliştirme becerilerimi sürekli olarak geliştirmekteyim.
+                </p>
+            </div>
+        </section>
+
+        <!-- İş Deneyimi -->
+        <section id="experience" class="mb-24">
+            <h2 class="section-title">İş Deneyimi</h2>
+            <div class="experience-timeline">
+                <!-- JR. SOFTWARE DEVELOPER -->
+                <div class="timeline-item">
+                    <div class="card p-6">
+                        <h4 class="text-xl font-bold text-blue-300">JR. SOFTWARE DEVELOPER</h4>
+                        <p class="text-sm text-gray-400 mb-2">PROVISION PAY / İSTANBUL | 2023 - Halen</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li>Bankacılık yazılımları alanında, kart yönetim sistemleri üzerine çalışan bir yazılım geliştirici olarak görev aldım.</li>
+                            <li>Kart işlemleri, limit yönetimi ve sistem entegrasyonları üzerinde çalıştım.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- YAZILIM UZMANI -->
+                <div class="timeline-item">
+                    <div class="card p-6">
+                        <h4 class="text-xl font-bold text-blue-300">YAZILIM UZMANI</h4>
+                        <p class="text-sm text-gray-400 mb-2">Diverseffect / İstanbul | 2022 - 2023</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li>.Net tabanlı uygulamalarda backend geliştirme süreçlerinde görev aldım.</li>
+                            <li>Veritabanı işlemleri, API entegrasyonları ve iş katmanı geliştirmeleri üzerine çalıştım.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beceriler -->
+        <section id="skills" class="mb-24">
+            <h2 class="section-title">Beceriler</h2>
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                <span class="skill-badge">C#</span>
+                <span class="skill-badge">ASP.NET Core MVC</span>
+                <span class="skill-badge">.Net Core Identity</span>
+                <span class="skill-badge">CI/CD</span>
+                <span class="skill-badge">.Net Core API</span>
+                <span class="skill-badge">RESTful</span>
+                <span class="skill-badge">Entity Framework</span>
+                <span class="skill-badge">MS SQL</span>
+                <span class="skill-badge">OOP</span>
+                <span class="skill-badge">HTML</span>
+                <span class="skill-badge">CSS</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Bootstrap</span>
+                <span class="skill-badge">Oracle PL/SQL</span>
+                <span class="skill-badge">Agile/Scrum</span>
+                <span class="skill-badge">SOLID</span>
+            </div>
+        </section>
+
+        <!-- Eğitim -->
+        <section id="education" class="mb-24">
+            <h2 class="section-title">Eğitim</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h4 class="text-xl font-bold text-blue-300">Bilgisayar Mühendisliği</h4>
+                    <p class="text-sm text-gray-400 mb-1">Lisans / Munzur Üniversitesi</p>
+                    <p class="text-sm text-gray-500">2015 - 2019</p>
+                </div>
+                <div class="card p-6">
+                    <h4 class="text-xl font-bold text-blue-300">Full Stack .NET Developer Eğitimi</h4>
+                    <p class="text-sm text-gray-400 mb-1">Fenerbahçe Üniversitesi</p>
+                    <p class="text-sm text-gray-500">2021 - 2022</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Bülent Karanfil &copy; 2024. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
